@@ -43,5 +43,64 @@ public class MainCat implements i_2{
         e1.num_1();
         e1.num_2();
         e1.num_3();
-    }
+
+        i_6 number ;
+        number = (y)->99.9/y;
+
+        System.out.println(number.getNumber(9.9));
+        System.out.println(number.getNumber(10.090909090909092));
+
+        i_7 IsFactor = (l, d) -> (l % d) == 0;
+        int a = 10;
+        int b = 2;
+        if (IsFactor.BoolenTest(a, b)) {
+            System.out.printf("%s is a divisor %s \n",b,a);
+        }
+        if (!IsFactor.BoolenTest(a, b=3)) {
+            System.out.printf("%s is not a divisor %s \n",b,a);
+        }
+
+        i_7 lessNum = (s, t) -> (s < t);
+
+        if (lessNum.BoolenTest(a=2, b=10)) {
+            System.out.printf("%s less %s \n",a,b);
+        }
+        if (!lessNum.BoolenTest(a=3, b=2)) {
+            System.out.printf("%s no less %s \n",a,b);
+        }
+
+        i_7 numEqual = (r, u) -> (r < 0 ? -r : r) == (u < 0 ? -u : u);
+
+        if (numEqual.BoolenTest(a=2, b=-2)) {
+            System.out.printf("%s equally %s \n",a,b);
+        }
+        if (!numEqual.BoolenTest(a=2, b=-3)) {
+            System.out.printf("%s no equally %s \n",a,b);
+        }
+
+        i_8 func_1 = (m) -> {
+            int result = 1;
+            m = m < 0 ? m : m;
+            for (int i = 2; i <= m; i++) {
+                if ((m % i) == 0) {
+                    result = i;
+                    break;
+                }
+            } 
+            return result;
+        };
+        System.out.printf("less is a divisor 12 = %s \n", func_1.func(12));
+        System.out.printf("less is a divisor 11 = %s \n", func_1.func(11));
+
+
+        i_9<Integer> isNum = x -> x > 0;
+
+        System.out.println(isNum.test(5));
+        System.out.println(isNum.test(-8));
+
+
+        i_10<Integer> num_1 = (x, y) -> (x * y);
+
+        System.out.println(num_1.apply(3, 5));
+     }
 }        

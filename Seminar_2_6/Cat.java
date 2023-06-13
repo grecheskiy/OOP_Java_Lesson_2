@@ -70,7 +70,6 @@ public class Cat implements i_1, i_4, i_5{
         @Override
         public void num_3() {
             System.out.println("num_3");
-        }
+        }  
         
-    
 }
